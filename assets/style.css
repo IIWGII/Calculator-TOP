@@ -1,0 +1,25 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    place-content: center;
+}
+.container {
+    width: 50vw;
+    min-width: 300px;
+    max-width: 700px;
+    height: 400px;
+    background-color: cyan;
+    
+}
+.card-container {
+    height: 100%;
+    background-color: wheat;
+}
+.card-container .card-header {
+    width: 80%;
+    min-height: 80px;
+    background-color: brown;
+    margin: auto;
+}
