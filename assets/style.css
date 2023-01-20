@@ -4,22 +4,105 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
     place-content: center;
+    background-color: peachpuff ;
 }
+
 .container {
-    width: 50vw;
-    min-width: 300px;
-    max-width: 700px;
-    height: 400px;
-    background-color: cyan;
-    
+    min-width: 350px;
+    max-width: 380px;
+    min-height: 400px;    
 }
+
+h1 {
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
 .card-container {
     height: 100%;
-    background-color: wheat;
+    background-color: dimgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0px;
+    border-radius: 5%;
+    border: 1px solid rgb(0, 0, 0);
 }
+
 .card-container .card-header {
+    color: black;
     width: 80%;
-    min-height: 80px;
-    background-color: brown;
-    margin: auto;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+    border-radius: 5px;
+    border: 5px solid rgba(0, 0, 0, 0.695);
+    background-color: rgba(119, 136, 153, 0.615);
+    word-wrap: break-word;
+    height: fit-content;
+}
+.card-container .card-header h2 {
+    margin: 0;
+    max-width: 300px;
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.2rem;
+    font-weight: normal;
+    padding: 0px 5px 0px 5px;
+}
+.card-container .card-header h3 {
+    margin: 0;
+    max-width: 300px;
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    font-weight: normal;
+    padding-right: 5px;
+    padding-left: 0;
+}
+.card-body .grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+}
+.card-container .card-body .calc-operation {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}
+.card-container .card-body .numbers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+/* 
+.card-body .grid  {
+    display: grid;
+    grid-template-columns: .2fr .2fr .2fr .2fr;
+    justify-content: center;
+    gap: 20px;
+} */
+
+.card-body .grid button {
+    width : 60px;
+    height : 60px;
+    border-radius : 50%;
+    font-size: 25px;
+}
+
+.card-body .grid button:hover {
+
 }
