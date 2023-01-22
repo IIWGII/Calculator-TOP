@@ -35,17 +35,19 @@ h1 {
 .card-container .card-header {
     color: black;
     width: 80%;
+    min-height: 100px;
+    max-height: auto;
     margin-bottom: 15px;
     margin-left: auto;
     margin-right: auto;
     text-align: right;
     border-radius: 5px;
     border: 5px solid rgba(0, 0, 0, 0.695);
-    background-color: rgba(119, 136, 153, 0.615);
+    background-color: rgba(249, 249, 249, 0.615);
     word-wrap: break-word;
     height: fit-content;
 }
-.card-container .card-header h2 {
+.card-container .card-header .current-operand {
     margin: 0;
     max-width: 300px;
     text-align: right;
@@ -53,8 +55,11 @@ h1 {
     font-size: 2.2rem;
     font-weight: normal;
     padding: 0px 5px 0px 5px;
+    color: rgb(0, 0, 0);
+    bottom: -25px;
+    position: relative;
 }
-.card-container .card-header h3 {
+.card-container .card-header .pervious-operand {
     margin: 0;
     max-width: 300px;
     text-align: right;
@@ -63,6 +68,7 @@ h1 {
     font-weight: normal;
     padding-right: 5px;
     padding-left: 0;
+    color: rgb(0, 0, 0)
 }
 .card-body .grid {
     display: flex;
