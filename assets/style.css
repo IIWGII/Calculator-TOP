@@ -109,6 +109,7 @@ h1 {
     font-size: 25px;
 }
 
-.card-body .grid button:hover {
-
+footer .tag {
+    color: black;
+    text-align: center;
 }

@@ -47,22 +47,50 @@ class Calculator {
             case '*':
                 computation = prev * current
                 break
-            case '/':
+            case '%':
                 computation = prev / current
                 break
             default:
                 return
-            
         }
-
+        this.currentOperand = computation
+        this.operation = undefined
+        this.previousOperand = ''
     }
+
+    getDisplayNumber(number) {
+        const floatNumber = parseFloat(number)
+        const integerDigits = parseFloat(stringNumber.split('.')[0])
+        const decimalDigits = stringNumber.split('.')[1]
+        let integerDisplay 
+        if (isNaN(integerDigits)) {
+            integerDisplay = ''
+        } else {
+            integerDisplay = integerDigits.toLocaleString('en', {
+                maximumFractionDigits: 0
+            })
+        }
+        if (decimalDigits != null) {
+            return `${integerDisplay}.${decimalDigits}`
+        } else {
+            return integerDisplay
+        }
+     }
+    
 
     updateDisplay() {
-      this.currentOperandTextElement.innerText = this.currentOperand
-      this.previousOperandTextElement.innerText = this.previousOperand
+        this.currentOperandTextElement.innerText =
+        this.getDisplayNumber(this.currentOperand)
+       if (this.operation != null) {
+         this.previousOperandTextElement.innerText =
+          `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
+     }else {
+        this.previousOperandTextElement.innerText = ''
+     }
     }
-
 }
+
+
 
 
 
@@ -90,8 +118,12 @@ operationButtons.forEach(button => {
     })
 })
 
-equalsButton.addEventListener('click', button => {
+equalsButton.addEventListener('click', () => {
     calculator.compute()
+    calculator.updateDisplay()
+})
+allClearButton.addEventListener('click', () => {
+    calculator.clear()
     calculator.updateDisplay()
 })
 
