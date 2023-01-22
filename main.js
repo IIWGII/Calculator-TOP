@@ -59,7 +59,7 @@ class Calculator {
     }
 
     getDisplayNumber(number) {
-        const floatNumber = parseFloat(number)
+        const stringNumber = number.toString()
         const integerDigits = parseFloat(stringNumber.split('.')[0])
         const decimalDigits = stringNumber.split('.')[1]
         let integerDisplay 
@@ -67,8 +67,7 @@ class Calculator {
             integerDisplay = ''
         } else {
             integerDisplay = integerDigits.toLocaleString('en', {
-                maximumFractionDigits: 0
-            })
+                maximumFractionDigits: 0 })
         }
         if (decimalDigits != null) {
             return `${integerDisplay}.${decimalDigits}`
